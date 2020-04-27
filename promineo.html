@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Coding Challenge</title>
 </head>
+
 <body>
 
     <script>
@@ -21,21 +23,25 @@
             var total = 0
             var count = 0
 
-           // I used a forEach loop to call each element in the array. Total and count are set to zero so that when the assignment operator adds the total value to each item, the item and average will not be affected. Count increments for each element in the array.
-            array.forEach(function(item, index) {
-                
+            // I used a forEach loop to call each element in the array. Total and count are set to zero so that when the assignment operator adds the total value to each item, the item and average will not be affected. Count increments for each element in the array.
+            array.forEach(function (item, index) {
+
                 total += item;
-                count ++;
+                count++;
             });
 
             // return the total divided by the count for the average. 
 
             return total / count;
         }
-        
+
         console.log(calculateAverage(lostNumbers));
 
+
+
+
     </script>
-    
+
 </body>
+
 </html>

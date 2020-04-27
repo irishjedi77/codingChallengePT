@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Coding Challenge</title>
+</head>
+<body>
+
+    <script>
+    
+     //Write a method or function that takes an array of strings and returns the difference in length between the shortest and longest string in the array.
+
+
+        //array of Star Wars rebels
+        var rebels = ["Han", "Luke", "Leia", "Obi-Wan", "Chewbacca", "R2D2", "C3P0"];
+
+        //I started by finding the longest word from the rebels array (returns Chewbacca).
+
+        function longestWord(rebels) {
+
+            let maxLength = 0  
+            let result = ''
+
+            for (let i = 0; i < rebels.length; i++) {
+                if (rebels[i].length > maxLength) {
+                    maxLength = rebels[i].length
+                    result = rebels[i]
+
+                }
+            }
+
+            return result
+
+        }
+        console.log(longestWord(rebels));
+
+        // I then found the shortest word in the rebels array (Han).
+        function shortestWord(rebels) {
+
+            let minLength = Infinity
+            let result = ''
+
+            for (let i = 0; i < rebels.length; i++) {
+                if (rebels[i].length < minLength) {
+                    minLength = rebels[i].length
+                    result = rebels[i]
+
+                }
+            }
+
+            return result
+        }
+        console.log(shortestWord(rebels));
+
+
+        //I attempted to find the difference between the shortest and longest below, but the result returns NaN.
+
+        function difference(rebels) {
+
+            let minLength = Infinity
+            let maxLength = 0
+            let result1 = ''
+            let result2 = ''
+            let result3 = ''
+
+
+            for (let i = 0; i < rebels.length; i++) {
+
+                
+
+                if (rebels[i].length < minLength) {
+                    minLength = rebels[i].length
+                    result1 = rebels[i]
+                } if (rebels[i].length > maxLength) {
+                        maxLength = rebels[i].length
+                        result2 = rebels[i]
+                        
+                } if (result2 > result1) {
+                    result3 = result2 - result1
+                }
+                
+            }
+            return result3
+
+        }
+
+
+        console.log(difference(rebels));
+
+        //I console logged Chewbacca's position in the array - Han's position to show the actual difference in lengths. 
+
+        console.log(rebels[4].length - rebels[0].length);
+
+
+
+
+    
+    </script>
+    
+</body>
+</html>
